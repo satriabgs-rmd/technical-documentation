@@ -53,6 +53,7 @@ main ul {
 }
 
 code pre {
+    max-width: 90%;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 5px;
