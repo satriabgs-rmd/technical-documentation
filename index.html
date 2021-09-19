@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Flexbox</header>
+        <a href="#pengertian" class="nav-link">pengertian</a>
+        <a href="#display" class="nav-link">display</a>
+        <a href="#flex-direction" class="nav-link">flex-direction</a>
+        <a href="#flex-wrap" class="nav-link">flex-wrap</a>
+        <a href="#flex-flow" class="nav-link">flex-flow</a>
+        <a href="#justify-content" class="nav-link">justify-content</a>
+        <a href="#align-items" class="nav-link">align-items</a>
+        <a href="#align-content" class="nav-link">align-content</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section"  id="pengertian">
+            <header>Pengertian</header>
+            <p>CSS3 Flexible box atau lebih dikenal dengan flexbox adalah mode layout yang digunakan untuk mengatur keluwesan elemen pada sebuah halaman web. Artinya, elemen-elemen tersebut bisa diatur sedemikian rupa sehingga bisa menyesuaikan ukuran layar dan diposisikan serta didistribusikan dengan jarak tertentu diantara item-item dalam sebuah container flex tersebut, bahkan ketika ukuran dari elemen tersebut tidak diketahui.</p>
+
+            <p>Flexbox sangat cocok digunakan untuk komponen sebuah aplikasi dan layout skala kecil. Tujuan utama penggunaan layout flex adalah untuk memberi kemampuan container agar dapat memenipulasi item-item (elemen) yang ada didalamnya, baik itu merubah tinggi dan lebar, urutan posisi elemen, dan spasi (jarak) diantara elemen tersebut.</p>
+                
+            <p>Harap Diperhatikan: Untuk mencoba dan mengaplikasikan tutorial mengenai flexbox ini, diharapkan tidak menggunakan browser versi lama yang tidak mendukung flex.</p>
+        </section>
+        <section class="main-section"  id="display">
+            <header>display</header>
+            <p>Menentukkan container untuk flex apakah inline atau block. Inilah yang mendasari sebuah elemen akan memiliki sifat flex atau tidak.</p>
+            <code><pre>
+.container {
+    display: flex; /* atau inline-flex */
+}
+            </pre></code>    
+        </section>
+        <section class="main-section"  id="flex-direction">
+            <header>flex-direction</header>
+            <p>Menentukkan arah (direction) yang akan diberlakukan untuk item-item yang ada pada container flexbox. Arah yang dimaksud adalah apakah ingin mengarah berbaris/horizontal (dari kiri ke kanan atau sebaliknya) atau seperti kolom/vertikal (dari atas kebawah atau sebaliknya).</p>
+            <code><pre>
+.container {
+    flex-direction: column;
+}
+
+/*
+    Pilihan value-nya adalah: row | row-reverse | column | column-reverse;
+*/
+            </pre></code>
+            <ul>
+                <li>row: Dari kiri ke Kanan.</li>
+                <li>row-reverse: Dari Kanan ke Kiri (Kebalikan dari row).</li>
+                <li>column: Dari Atas ke Bawah.</li>
+                <li>column-reverse: Dari Bawah ke Atas (kebalikan dari column).</li>
+            </ul>    
+        </section>
+        <section class="main-section"  id="flex-wrap">
+            <header>flex-wrap</header>
+            <p>flex-wrap digunakan untuk mendefinisikan bahwa elemen item di dalam container flexbox tidak harus disejajarkan dalam satu baris. Artinya, elemen item tersebut digulung (dipindahkan) ke baris baru bila sudah memenuhi lebar container-nya.</p>
+            <code><pre>
+.container {
+    flex-wrap: wrap;
+}
+
+/*
+    Pilihan value-nya adalah: nowrap | wrap | wrap-reverse
+*/
+            </pre></code>    
+        </section>
+        <section class="main-section"  id="flex-flow">
+            <header>flex-flow</header>
+            <p>flex-flow adalah kependekan (tulisan cepat) dari flex-direction dan flex-wrap sebagaimana dijelaskan tersebut diatas. Sebaiknya menggunakan kependekan ini dalam produksi design web.</p>
+            <code><pre>
+.container {
+    flex-flow: row wrap;
+}
+
+/*
+    penggunaanya adalah: flex-direction: flex-wrap
+*/
+            </pre></code>    
+        </section>
+        <section class="main-section"  id="justify-content">
+            <header>justify-content</header>
+            <p>justify-content digunakan untuk mensejajarkan item-item diantara flexbox agar container dari flexbox tersebut bisa mendistribusikan ruang kosong yang tersisa ketika item flex dalam satu baris tersebut tidak flexsibel atau meskipun flexsibel tapi sudah mencapai batas ukuran maksimum.</p>
+            <code><pre>
+.container {
+    justify-content: space-around;
+}
+
+/*
+    Pilihan value-nya adalah: flex-start | flex-end | center | space-between | space-around;
+*/
+            </pre></code>
+            <ul>
+                <li>flex-start: Item flex disejajarkan dari baris pertama (kiri).</li>
+                <li>flex-end: Item flex disejajarkan pada baris terakhir (kanan).</li>
+                <li>center: disejajarkan ditengah-tengah baris.</li>
+                <li>space-between: disejajarkan dengan memberi spasi diantara item, yang mana item pertama berada pada baris pertama dan item terakhir pada baris terakhir.</li>
+                <li>space-around: disejajarkan dengan memberi spasi yang sama diantara item. spasi diantara item tersebut mungkin nampak tidak sama karena semua item memiliki spasi yang sama pada kedua sisi.</li>
+            </ul>    
+        </section>
+        <section class="main-section"  id="align-items">
+            <header>align-items</header>
+            <p>align-items mendefinisikan bagaimana item-item pada container flex tersebut diletakkan sepanjang garis tegak lurus pada sumbu utama (cross-axis). Ini sama halnya dengan justify-content tapi peletakkannya saja yang berbeda.</p>
+            <code><pre>
+.container {
+    align-items: flex-end;
+}
+
+/*
+    Pilihan value-nya adalah: flex-start | flex-end | center | baseline | stretch;
+*/                
+            </pre></code>    
+        </section>
+        <section class="main-section"  id="align-content">
+            <header>align-content</header>  
+            <p>align-content digunakan untuk mensejajarkan garis flex container ketika ada ruang kosong secara garis tegak lurus pada sumbu utama (cross-axis). Sama halnya dengan justify-content yang mana mensejajarkan individu items pada main axis.</p>
+            <br><br>
+            <p>Harap diperhatikan: Properti ini tidak dapat diaplikasikan jika hanya terdapat satu flex item.</p>
+            <code><pre>
+.container {
+    align-content: flex-end;
+}
+
+/*
+    Pilihan value-nya adalah: flex-start | flex-end | center | space-between | space-around | stretch;
+*/
+            </pre></code>
+        </section>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

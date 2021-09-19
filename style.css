@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+
+#navbar {
+    min-width: 250px;
+    border-right: 2px solid rgb(133, 133, 133);
+}
+
+nav header, main header {
+    font-weight: 500;
+    font-size: 26px;
+}
+
+#navbar header {
+    padding: 13px;
+}
+
+#navbar a {
+    color: rgb(138, 138, 138);
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid rgb(133, 133, 133);
+    padding: 10px 20px;
+}
+
+main {
+    margin-left: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+main p {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+main ul {
+    font-size: 13px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+code pre {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+
+
+
+
+
+/* media Query */
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        border-bottom: 2px solid rgb(133, 133, 133);
+        height: 300px;
+        overflow-y: scroll;
+    }
+
+    nav header {
+        text-align: center;
+    }
+
+    main {
+        line-height: 40px;
+        overflow-y: unset;
+    }
+
+    code pre {
+        margin-right: 20px;
+        overflow-x: scroll;
+    }
+}
